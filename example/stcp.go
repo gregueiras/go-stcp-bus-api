@@ -8,7 +8,9 @@ import (
 )
 
 func main() {
+    port := os.Getenv("PORT")
+    
     // * Requests are made to http://localhost:8080/<bus stop code>
     // * Bus stop codes can be found here http://www.stcp.pt/pt/viajar/linhas/
-    panic(fasthttp.ListenAndServe(os.Args[1], stcpbusapi.Handler))
+    panic(fasthttp.ListenAndServe(port, stcpbusapi.Handler))
 }
