@@ -12,5 +12,5 @@ func main() {
     
     // * Requests are made to http://localhost:8080/<bus stop code>
     // * Bus stop codes can be found here http://www.stcp.pt/pt/viajar/linhas/
-    panic(fasthttp.ListenAndServe(port, stcpbusapi.Handler))
+    panic(fasthttp.ListenAndServe(":" + port, stcpbusapi.Handler))
 }
